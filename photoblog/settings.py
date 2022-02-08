@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-p*csqnvsahpf30x=a%+ti8k*^#ms7ikt$+#-mc@@-%y-)02d6d
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['localhost', 'www.localhost',
-                 '127.0.0.1', 'khayi-photogallery.herokuapp.com']
+                 '127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'photoblog.urls'
