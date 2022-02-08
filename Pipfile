@@ -11,6 +11,8 @@ gunicorn = "*"
 django-bootstrap5 = "*"
 psycopg2 = "*"
 dj-database-url = "*"
+django-heroku = "*"
+django-bootstrap = "*"
 
 [dev-packages]
 
