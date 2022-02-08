@@ -1,2 +1,4 @@
 django
 Pillow
+gunicorn
+django-heroku

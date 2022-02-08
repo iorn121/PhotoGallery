@@ -34,7 +34,7 @@ except ImportError:
     django_heroku.settings(locals())
 
 ALLOWED_HOSTS = ['localhost', 'www.localhost',
-                 '127.0.0.1', 'khayi-photoblog.herokuapp.com']
+                 '127.0.0.1', 'khayi-photogallery.herokuapp.com']
 
 
 # Application definition
