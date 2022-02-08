@@ -25,13 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p*csqnvsahpf30x=a%+ti8k*^#ms7ikt$+#-mc@@-%y-)02d6d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-try:
-    from .local_settings import *
-except ImportError:
-    import django_heroku
-    django_heroku.settings(locals())
 
 ALLOWED_HOSTS = ['localhost', 'www.localhost',
                  '127.0.0.1', 'khayi-photogallery.herokuapp.com']
@@ -140,3 +133,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEBUG = False
+
+try:
+    from .local_settings import *
+except ImportError:
+    import django_heroku
+    django_heroku.settings(locals())
