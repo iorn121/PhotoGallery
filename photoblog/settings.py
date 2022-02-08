@@ -22,9 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-p*csqnvsahpf30x=a%+ti8k*^#ms7ikt$+#-mc@@-%y-)02d6d'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECRET_KEY = 'django-insecure-p*csqnvsahpf30x=a%+ti8k*^#ms7ikt$+#-mc@@-%y-)02d6d'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['localhost', 'www.localhost',
                  '127.0.0.1', '.herokuapp.com']
@@ -80,10 +79,10 @@ WSGI_APPLICATION = 'photoblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
-        'USER': 'name',
+        'NAME': 'photo',
+        'USER': 'iorn121',
         'PASSWORD': '',
-        'HOST': 'localhost',
+        'HOST': 'host',
         'PORT': '',
     }
 }
