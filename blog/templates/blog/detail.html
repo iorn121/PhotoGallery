@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'detail.css' %}"
+    />
+    <script src='{% static "detail.js" %}'></script>
+  </head>
+  <body>
+    <h1>{{blog.title}}</h1>
+    <h8>updated {{blog.updated_at}}</h8>
+    <hr />
+    <div>
+      <img src="{{blog.image.url}}" alt="{{blog.content}}" width="80%" />
+    </div>
+    <p>{{blog.content}}</p>
+    <hr />
+    <a href='{% url 'blog:index'%}'>トップに戻る</a>
+  </body>
+</html>
