@@ -6,3 +6,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('detail/<int:blog_id>', views.detail, name='detail'),
 ]
+
+handler500 = views.my_customized_server_error
