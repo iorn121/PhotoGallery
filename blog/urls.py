@@ -1,3 +1,4 @@
+from map.views import my_customized_server_error
 from django.urls import path
 from . import views
 
@@ -6,3 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('detail/<int:blog_id>', views.detail, name='detail'),
 ]
+
+handler500 = my_customized_server_error
