@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'photoblog.wsgi.application'
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ['cloud_name'],
-    'API_KEY': os.environ['api_key'],
-    'API_SECRET': os.environ['api_secret']
+    'CLOUD_NAME': os.environ['CLOUD_NAME'],
+    'API_KEY': os.environ['API_KEY'],
+    'API_SECRET': os.environ['API_SECRET']
 }
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
