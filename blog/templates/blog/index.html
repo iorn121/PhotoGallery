@@ -18,7 +18,7 @@
     <h1>Khayi's Photo Library</h1>
     <p>記事一覧</p>
     <hr />
-    {% for blog in blogs %}
+    {% for blog in blogs %} {% load cloudinary %}
     <div>
       <h3>{{blog.title}}</h3>
       <a href="{% url 'blog:detail' blog.id %}" target="_blank"

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = 'django-insecure-p*csqnvsahpf30x=a%+ti8k*^#ms7ikt$+#-mc@@-%y-)02d6d'
+SECRET_KEY = os.environ['secret_key']
 ALLOWED_HOSTS = ['localhost', 'www.localhost',
                  '127.0.0.1', '.herokuapp.com']
 
@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'blog',
+    'cloudinary',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
 ]
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,6 +76,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'photoblog.wsgi.application'
 
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ['cloud_name'],
+    'API_KEY': os.environ['api_key'],
+    'API_SECRET': os.environ['api_secret']
+}
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
