@@ -84,11 +84,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'photoblog.wsgi.application'
 
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ['CLOUD_NAME'],
-    'API_KEY': os.environ['API_KEY'],
-    'API_SECRET': os.environ['API_SECRET']
-}
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': os.environ['CLOUD_NAME'],
+#     'API_KEY': os.environ['API_KEY'],
+#     'API_SECRET': os.environ['API_SECRET']
+# }
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
