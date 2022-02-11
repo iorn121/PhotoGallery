@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% load static %} {% load cloudinary %}
+    {% load static %}
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="{% static 'index.css' %}"
     />
+    {% load cloudinary %}
     <script src='{% static "index.js" %}'></script>
   </head>
   <body>
@@ -22,11 +23,8 @@
     <div>
       <h3>{{blog.title}}</h3>
       <a href="{% url 'blog:detail' blog.id %}" target="_blank"
-        ><img
-          src="{% cloudinary blog.image %}"
-          alt="{{blog.content}}"
-          width="80%"
-      /></a>
+        >{% cloudinary blog.image %}</a
+      >
     </div>
     <hr />
     {% endfor %}
