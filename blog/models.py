@@ -5,8 +5,8 @@ from cloudinary.models import CloudinaryField
 class Blog(models.Model):
     title = models.CharField(blank=False, null=False, max_length=100)
     content = models.TextField(blank=True)
-    image = models.ImageField(upload_to='image/', blank=True)
-    # image = CloudinaryField('image', null=True)
+    # image = models.ImageField(upload_to='image/', blank=True)
+    image = CloudinaryField('image')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% load static %}
+    {% load static %} {% load cloudinary %}
     <link
       rel="stylesheet"
       type="text/css"
@@ -22,7 +22,10 @@
     <div>
       <h3>{{blog.title}}</h3>
       <a href="{% url 'blog:detail' blog.id %}" target="_blank"
-        ><img src="{{blog.image.url}}" alt="{{blog.content}}" width="80%"
+        ><img
+          src="{% cloudinary blog.image.name %}"
+          alt="{{blog.content}}"
+          width="80%"
       /></a>
     </div>
     <hr />
