@@ -12,7 +12,6 @@
       media="screen"
       href="{% static 'index.css' %}"
     />
-    {% load cloudinary %}
     <script src='{% static "index.js" %}'></script>
   </head>
   <body>
@@ -23,8 +22,8 @@
     <div>
       <h3>{{blog.title}}</h3>
       <a href="{% url 'blog:detail' blog.id %}" target="_blank"
-        >{% cloudinary blog.image %}</a
-      >
+        ><img src="{{blog.image.url}}" alt="{{blog.content}}" width="80%"
+      /></a>
     </div>
     <hr />
     {% endfor %}
